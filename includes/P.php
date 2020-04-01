@@ -36,14 +36,69 @@ include 'header.php';
 		 <div class="col-lg-6 about contor-bg">
       <div class="carousel-item active">
         <div class="carousel-container">
-                <p class= "ProfileBox">שם פרטי<p>
-                <p class= "ProfileBox">שם משתמש</p>
-                <p class= "ProfileBox">סיסמא</p>
-                <p class= "ProfileBox">מייל</p>
-                <p class= "ProfileBox">גיל</p>
-                <p class= "ProfileBox">מספר טלפון</p>
-                <p class= "ProfileBox">מין</p>
-                <p class= "ProfileBox">רמת משחק</p>
+                <p class= "ProfileBox"><span style="font-weight:bold"> שם מלא: </span>
+                  <?php 
+                    $strSQL = "SELECT fullName FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['fullName'];
+                    }
+                  ?> </p>
+                <p class= "ProfileBox"><span style="font-weight:bold"> שם משתמש: </span>
+                  <?php 
+                    $strSQL = "SELECT username FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['username'];
+                    }
+                  ?> </p>
+
+                <p class= "ProfileBox"><span style="font-weight:bold"> סיסמא: ******** </span>
+
+                <p class= "ProfileBox"><span style="font-weight:bold">  מייל: </span>
+                  <?php 
+                    $strSQL = "SELECT email FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['email'];
+                    }
+                  ?> </p>
+                <p class= "ProfileBox"><span style="font-weight:bold"> גיל: </span>
+                  <?php 
+                    $strSQL = "SELECT age FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['age'];
+                    }
+                  ?> </p>
+
+                 <p class= "ProfileBox"><span style="font-weight:bold"> מספר טלפון: </span>
+                  <?php 
+                    $strSQL = "SELECT phoneNumber FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['phoneNumber'];
+                    }
+                  ?> </p>
+
+                 <p class= "ProfileBox"><span style="font-weight:bold"> מין: </span>
+                  <?php 
+                    $strSQL = "SELECT gender FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['gender'];
+                    }
+                  ?> </p>
+
+                 <p class= "ProfileBox"><span style="font-weight:bold"> רמת משחק: </span>
+                  <?php 
+                    $strSQL = "SELECT level FROM users WHERE username = '".$_SESSION['username']."'";
+                    $rs = mysqli_query($con, $strSQL);
+                    while($row = mysqli_fetch_array($rs)) {
+                    echo $row['level'];
+                    }
+                  ?> </p>
+                
                 <p><button class= "SendFormRdiv" id="submitA">עדכון פרטים</button></p>
         </div>
       </div>	

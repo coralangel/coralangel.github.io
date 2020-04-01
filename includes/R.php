@@ -32,16 +32,16 @@ include 'header.php';
                       <label for="phoneNumber">מספר טלפון</label><br>
                       <input type="number" name="phoneNumber" placeholder="0546688624"><br><br>
                       <h4> מין </h4>
-                      <input type="radio" name="gender" value="male">
+                      <input type="radio" name="gender" value="גבר">
                       <label for="male" >גבר</label><br>
-                      <input type="radio" name="gender" value="female">
+                      <input type="radio" name="gender" value="אישה">
                       <label for="female">אישה</label><br>
                       <h4> רמת משחק </h4>
-                      <input type="radio" name="level" value="amt">
+                      <input type="radio" name="level" value="חובבן">
                       <label for="amt">חובבן</label><br>
-                      <input type="radio"  name="level" value="mid">
+                      <input type="radio"  name="level" value="בינוני">
                       <label for="mid">בינוני</label><br>
-                      <input type="radio" name="level" value="pro">
+                      <input type="radio" name="level" value="מקצוען">
                       <label for="pro">מקצוען</label><br>
                       
                       <input type="reset" value="נקה טופס" id="submitA">
